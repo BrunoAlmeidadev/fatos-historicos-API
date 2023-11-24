@@ -2,7 +2,7 @@ const express = require('express');
 const { servicoBuscarFatoPorAno, servicoValidaAno } = require('./servico');
 const app = express();
 
-app.get('/fatos-historicos', (req, res)  => {
+app.get('/fatos', (req, res)  => {
     let anoFato = req.query.ano;
     if(servicoValidaAno(anoFato))
     {
